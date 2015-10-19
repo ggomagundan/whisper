@@ -1,0 +1,16 @@
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% for board in @boards %>
+    <tr>
+      <td><%= board.title %></td>
+      <td><%= link_to "Show", board %></td>
+      <td><%= link_to "Edit", edit_board_path(board) %></td>
+      <td><%= link_to "Destroy", board, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Board", new_board_path %></p>

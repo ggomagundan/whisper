@@ -1,0 +1,16 @@
+
+<p>
+  <strong>title:</strong>
+  <%= @board.title %>
+</p>
+
+<p>
+  <strong>content:</strong>
+  <%= @board.content%>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_board_path(@board) %> |
+  <%= link_to "Destroy", @board, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", boards_path %>
+</p>
